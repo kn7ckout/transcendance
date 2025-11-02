@@ -1,0 +1,41 @@
+@import 'tailwindcss';
+
+@theme {
+    /* Fonts */
+    --font-sans: 'Satoshi', sans-serif;
+
+    /* Spacing */
+    --spacing-eq-lg: 1400px;
+    --spacing-eq-sm: 1100px;
+    --spacing-eq-xs: 600px;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+    animation: gradient 8s linear infinite;
+}
+
+.gradient-text {
+    background: linear-gradient(to right, #ffaa40, #9c40ff, #ffaa40);
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: gradient 8s linear infinite;
+}
+
+.cursor-gradient {
+    background: linear-gradient(45deg, #ffaa40, #9c40ff, #ffaa40);
+    background-size: 300% 300%;
+    animation: gradient 3s ease-in-out infinite;
+}
+
+body {
+    @apply bg-neutral-950 text-white;
+}
